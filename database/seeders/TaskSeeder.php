@@ -16,7 +16,7 @@ class TaskSeeder extends Seeder
                 Task::create([
                     'user_id' => $user->id,
                     'title' => "Sample Task $i for {$user->name}",
-                    'priority' => ['Low', 'Medium', 'High'][rand(0,2)],
+                    'priority' => rand(0,2),
                     'completed' => false,
                 ]);
             }
